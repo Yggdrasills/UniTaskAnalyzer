@@ -61,7 +61,7 @@ namespace UniTaskAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Invocation should be awaited.
+        ///   Looks up a localized string similar to Warning 1   Because this call is not awaited, execution of the current method continues before the call is completed. Consider applying the &apos;await&apos; operator ir &apos;.Forget()&apos; invocation to the result of the call..
         /// </summary>
         internal static string UniTaskAnalyzerDescription {
             get {
@@ -70,7 +70,7 @@ namespace UniTaskAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1. Insert await or .Forget().
+        ///   Looks up a localized string similar to This call is not awaited. Consider applying the &apos;await&apos; operator or &apos;.Forget()&apos; invocation to the result of the call..
         /// </summary>
         internal static string UniTaskAnalyzerMessageFormat {
             get {
@@ -79,38 +79,11 @@ namespace UniTaskAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to UniTaskAnalyzer.
+        ///   Looks up a localized string similar to Possible missing &apos;await&apos; or &apos;.Forget()&apos;.
         /// </summary>
         internal static string UniTaskAnalyzerTitle {
             get {
                 return ResourceManager.GetString("UniTaskAnalyzerTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Invocation should be Fired.
-        /// </summary>
-        internal static string UniTaskVoidAnalyzerDescription {
-            get {
-                return ResourceManager.GetString("UniTaskVoidAnalyzerDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Fire and Forget.
-        /// </summary>
-        internal static string UniTaskVoidAnalyzerMessageFormat {
-            get {
-                return ResourceManager.GetString("UniTaskVoidAnalyzerMessageFormat", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to UniTaskVoidAnalyzer.
-        /// </summary>
-        internal static string UniTaskVoidAnalyzerTitle {
-            get {
-                return ResourceManager.GetString("UniTaskVoidAnalyzerTitle", resourceCulture);
             }
         }
     }

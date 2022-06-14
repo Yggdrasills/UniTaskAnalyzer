@@ -118,27 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="UniTaskAnalyzerDescription" xml:space="preserve">
-    <value>Invocation should be awaited</value>
-    <comment>UniTask Description comment</comment>
+    <value>Warning 1   Because this call is not awaited, execution of the current method continues before the call is completed. Consider applying the 'await' operator ir '.Forget()' invocation to the result of the call.</value>
   </data>
   <data name="UniTaskAnalyzerMessageFormat" xml:space="preserve">
-    <value>1. Insert await or .Forget()</value>
-    <comment>UniTask MessageFormat comment</comment>
+    <value>This call is not awaited. Consider applying the 'await' operator or '.Forget()' invocation to the result of the call.</value>
   </data>
   <data name="UniTaskAnalyzerTitle" xml:space="preserve">
-    <value>UniTaskAnalyzer</value>
-    <comment>UniTask Title comment</comment>
-  </data>
-  <data name="UniTaskVoidAnalyzerDescription" xml:space="preserve">
-    <value>Invocation should be Fired</value>
-    <comment>UniTaskVoid Description comment</comment>
-  </data>
-  <data name="UniTaskVoidAnalyzerMessageFormat" xml:space="preserve">
-    <value>Fire and Forget</value>
-    <comment>UniTaskVoid MessageFormat comment</comment>
-  </data>
-  <data name="UniTaskVoidAnalyzerTitle" xml:space="preserve">
-    <value>UniTaskVoidAnalyzer</value>
-    <comment>UniTaskVoid Title comment</comment>
+    <value>Possible missing 'await' or '.Forget()'</value>
   </data>
 </root>

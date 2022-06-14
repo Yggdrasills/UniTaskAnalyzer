@@ -17,13 +17,13 @@ namespace UniTaskAnalyzer
         private const string Category = "Usage";
 
         private static readonly LocalizableString Title =
-            new LocalizableResourceString(nameof(Resources.UniTaskVoidAnalyzerTitle), Resources.ResourceManager, typeof(Resources));
+            new LocalizableResourceString(nameof(Resources.UniTaskAnalyzerTitle), Resources.ResourceManager, typeof(Resources));
 
         private static readonly LocalizableString MessageFormat =
-            new LocalizableResourceString(nameof(Resources.UniTaskVoidAnalyzerMessageFormat), Resources.ResourceManager, typeof(Resources));
+            new LocalizableResourceString(nameof(Resources.UniTaskAnalyzerMessageFormat), Resources.ResourceManager, typeof(Resources));
 
         private static readonly LocalizableString Description =
-            new LocalizableResourceString(nameof(Resources.UniTaskVoidAnalyzerDescription), Resources.ResourceManager, typeof(Resources));
+            new LocalizableResourceString(nameof(Resources.UniTaskAnalyzerDescription), Resources.ResourceManager, typeof(Resources));
 
 
         private static readonly DiagnosticDescriptor Rule = new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
