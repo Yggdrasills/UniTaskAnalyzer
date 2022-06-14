@@ -47,6 +47,9 @@ namespace UniTaskAnalyzer
                 return;
             }
 
+            if (node.Parent.IsKind(SyntaxKind.Argument))
+                return;
+
             if (node.HasForgetInvocation())
                 return;
 

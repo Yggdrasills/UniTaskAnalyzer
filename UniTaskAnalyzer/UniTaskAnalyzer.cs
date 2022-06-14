@@ -49,6 +49,9 @@ namespace UniTaskAnalyzer
             if (fullNode.Expression != node.Expression)
                 return;
 
+            if (node.Parent.IsKind(SyntaxKind.Argument))
+                return;
+
             if (fullNode.HasForgetInvocation())
                 return;
 
@@ -62,7 +65,7 @@ namespace UniTaskAnalyzer
             if (methodSymbol is null)
                 return;
 
-            if (ContainsAwaitableType(semanticModel, node, methodSymbol))
+            if (IsUniTask(semanticModel, node, methodSymbol))
             {
                 var diagnostic = Diagnostic.Create(Rule, node.GetLocation(), methodSymbol.ToDisplayString());
 
@@ -70,7 +73,7 @@ namespace UniTaskAnalyzer
             }
         }
 
-        private bool ContainsAwaitableType(SemanticModel semanticModel, SyntaxNode node, IMethodSymbol methodSymbol)
+        private bool IsUniTask(SemanticModel semanticModel, SyntaxNode node, IMethodSymbol methodSymbol)
         {
             var typeSymbol = semanticModel.GetTypeInfo(node).Type as INamedTypeSymbol;
             var symbol = semanticModel.Compilation.GetTypeByMetadataName(UniTaskFullName);
