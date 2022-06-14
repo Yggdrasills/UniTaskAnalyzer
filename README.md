@@ -2,16 +2,19 @@ UniTaskAnalyzer for Unity
 ===
 in the case of a synchronous call to an asynchronous method on an object by interface type, the standard code analyzer does not highlight the construct and does not suggest a fix, unlike a call by class type (warning CS4014). UniTaskAnalyzer handles this situation and suggest to insert `await` operator or `Forget()` invocation.
 
-Works both in Rider or VS
+Works both in Rider or VS and throws warning in unity console
 
 Getting started
 ---
-Install via asset package available on [releases](https://github.com/Yggdrasills/UniTaskAnalyzer/releases) page.
+1. Install [UniTask](https://github.com/Cysharp/UniTask)
+2. Import UniTaskAnalyzer unitypackage available on [releases](https://github.com/Yggdrasills/UniTaskAnalyzer/releases) page.
 
 Notes
 ---
-- :small_red_triangle_down: Works from Unity 2020.1 and above
-- :small_red_triangle_down: To enable analyzer you need check following steps in Project Setting (Player -> Other Settings):
+- :small_red_triangle_down: Works for Unity 2020.1 and above
+- Works only for UniTask, UniTask<> and UniTaskVoid
+- For [Tasks](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-6.0) there is another plugin [unused-task-warning](https://github.com/ykoksen/unused-task-warning) // thanks to [ykoksen](https://github.com/ykoksen) for open-source solution
+- To enable analyzer you need check following steps in Project Setting (Player -> Other Settings):
     -   [x] Enable Roslyn Analyzer 
     -   [x] Use Roslyn Reference Assemblies 
 
@@ -93,5 +96,4 @@ Example:
 
 Known issues
 ---
-1. :white_check_mark: Works only for UniTask, UniTask<>, UniTaskVoid. For [System.Threading.Tasks](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-6.0) there is another plugin [unused-task-warning](https://github.com/ykoksen/unused-task-warning) // thx to [ykoksen](https://github.com/ykoksen) for open-source solution
-2. The analyzer does not work correctly when passing through a parameter [issue](https://github.com/Yggdrasills/UniTaskAnalyzer/issues/5)
+1. Knows issues are closed now
