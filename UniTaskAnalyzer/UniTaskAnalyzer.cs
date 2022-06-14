@@ -44,7 +44,10 @@ namespace UniTaskAnalyzer
             if (!(context.Node is InvocationExpressionSyntax node))
                 return;
 
-            var fullNode = node.GetInvocationNode();
+            var fullNode = node.GetInvocationNode() as InvocationExpressionSyntax;
+
+            if (fullNode.Expression != node.Expression)
+                return;
 
             if (fullNode.HasForgetInvocation())
                 return;
