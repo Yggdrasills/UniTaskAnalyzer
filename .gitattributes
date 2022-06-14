@@ -1,1 +1,4 @@
-*.powershell linguist-detectable=false
+*.p1 linguist-detectable=false
+*.resx linguist-detectable=false
+*.csproj linguist-detectable=false
+*.cs linguist-detectable=true
