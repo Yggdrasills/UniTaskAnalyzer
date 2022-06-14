@@ -11,7 +11,7 @@ Getting started
 
 Notes
 ---
-- :small_red_triangle_down: Works for Unity 2020.1 and above
+- :small_red_triangle_down: Works for Unity 2020.2 and above
 - Works only for UniTask, UniTask<> and UniTaskVoid
 - For [Tasks](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-6.0) there is another plugin [unused-task-warning](https://github.com/ykoksen/unused-task-warning) // thanks to [ykoksen](https://github.com/ykoksen) for open-source solution
 - To enable analyzer you need check following steps in Project Setting (Player -> Other Settings):
