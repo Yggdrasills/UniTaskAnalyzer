@@ -87,10 +87,4 @@ Example:
 Known issues
 ---
 1. Works only for UniTask, UniTask<>, UniTaskVoid. For [System.Threading.Tasks](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-6.0) there is another plugin [unused-task-warning](https://github.com/ykoksen/unused-task-warning) // thx to [ykoksen](https://github.com/ykoksen) for open-source solution
-2. The analyzer does not work correctly when passing through a parameter [issue](https://github.com/Yggdrasills/UniTaskAnalyzer/issues/5):
-  ```
-    private void Foo(Action<UniTask> action, Func<UniTask> func)
-    {
-        action.Invoke(func()); // will give a warning, but shouldn't
-    }
-  ```
+2. The analyzer does not work correctly when passing through a parameter [issue](https://github.com/Yggdrasills/UniTaskAnalyzer/issues/5)
