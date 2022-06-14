@@ -8,6 +8,13 @@ Getting started
 ---
 Install via asset package available on [releases](https://github.com/Yggdrasills/UniTaskAnalyzer/releases) page.
 
+Notes
+---
+- :small_red_triangle_down: Works from Unity 2020.1 and above
+- :small_red_triangle_down: To enable analyzer you need check following steps in Project Setting (Player -> Other Settings):
+    -   [x] Enable Roslyn Analyzer 
+    -   [x] Use Roslyn Reference Assemblies 
+
 Example:
 
 ```csharp
@@ -86,5 +93,5 @@ Example:
 
 Known issues
 ---
-1. Works only for UniTask, UniTask<>, UniTaskVoid. For [System.Threading.Tasks](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-6.0) there is another plugin [unused-task-warning](https://github.com/ykoksen/unused-task-warning) // thx to [ykoksen](https://github.com/ykoksen) for open-source solution
+1. :white_check_mark: Works only for UniTask, UniTask<>, UniTaskVoid. For [System.Threading.Tasks](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-6.0) there is another plugin [unused-task-warning](https://github.com/ykoksen/unused-task-warning) // thx to [ykoksen](https://github.com/ykoksen) for open-source solution
 2. The analyzer does not work correctly when passing through a parameter [issue](https://github.com/Yggdrasills/UniTaskAnalyzer/issues/5)
